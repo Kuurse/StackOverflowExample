@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StackOverflow.Views.AboutPage"
+             xmlns:vm="clr-namespace:StackOverflow.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <Grid>
+                <Button Margin="0,10,0,0" Text="Click to open modal page !"
+                        Command="{Binding OpenWebCommand}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+        </Grid>
+</ContentPage>
+
